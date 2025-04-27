@@ -66,9 +66,13 @@
    ```bash
    Open http://localhost:3000 in your browser
    ```
-# 📸 Screenshots
+## 📸 Screenshots
+
 <div align="center">
-Light Mode	Dark Mode
-Light Mode	Dark Mode
+
+| Light Mode | Dark Mode |
+|------------|-----------|
+| <img src="screenshots/light-mode.png" width="400"> | <img src="screenshots/dark-mode.png" width="400"> |
+
 </div>
 
