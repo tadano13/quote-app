@@ -45,24 +45,31 @@
 - Git (optional)
 
 ### Step-by-Step Setup
-
-1. **Clone the repository**
+1. ** OPEN quote-app folder and open terminal then run the following command **
+   ```bash
+   npm init -y
+   ```
+   ```bash
+   npm install express mongoose ejs
+   ```
+   
+2. **Clone the repository**
    ```bash
    git clone https://github.com/tadano13/quote-app.git
    ```
-2. **Navigate to project directory**
+3. **Navigate to project directory**
    ```bash
    cd quote-app
    ```
-3. **Install dependencies**
+4. **Install dependencies**
    ```bash
    npm install
    ```
-4. **Run the application**
+5. **Run the application**
    ```bash
    node server.js
    ```
-5. **Access the app**
+6. **Access the app**
    ```bash
    Open http://localhost:3000 in your browser
    ```
