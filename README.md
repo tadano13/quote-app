@@ -45,7 +45,7 @@
 - Git (optional)
 
 ### Step-by-Step Setup
-1. ** OPEN quote-app folder and open terminal then run the following command **
+1. **OPEN quote-app folder and open terminal then run the following command**
    ```bash
    npm init -y
    ```
