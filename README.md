@@ -35,28 +35,41 @@
 **Database:**  
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
 
-🚀 Installation
-bash
-# Clone the repository
-git clone https://github.com/yourusername/quote-app.git
+---
 
-# Navigate to project directory
-cd quote-app
+## 🚀 Installation Guide
 
-# Install dependencies
-npm install
+### Prerequisites
+- Node.js (v16 or higher)
+- MongoDB Community Edition
+- Git (optional)
 
-# Start MongoDB (in separate terminal)
-mongod
+### Step-by-Step Setup
 
-# Run the application
-node server.js
-Visit http://localhost:3000
-
-📸 Screenshots
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/tadano13/quote-app.git
+   ```
+2. **Navigate to project directory**
+   ```bash
+   cd quote-app
+   ```
+3. **Install dependencies**
+   ```bash
+   npm install
+   ```
+4. **Run the application**
+   ```bash
+   node server.js
+   ```
+5. **Access the app**
+   ```bash
+   Open http://localhost:3000 in your browser
+   ```
+# 📸 Screenshots
 <div align="center">
 Light Mode	Dark Mode
-<img src="https://via.placeholder.com/400x250/FFFFFF/37474F?text=Light+Mode" width="90%">	<img src="https://via.placeholder.com/400x250/1B263B/E0E1DD?text=Dark+Mode" width="90%">
+Light Mode	Dark Mode
 </div>
-📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+# 📜 License
+*This project is licensed under the MIT License - see the LICENSE file for details.*
