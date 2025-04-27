@@ -71,5 +71,5 @@
 Light Mode	Dark Mode
 Light Mode	Dark Mode
 </div>
-# 📜 License
+# 📜 License <\n>
 *This project is licensed under the MIT License - see the LICENSE file for details.*
