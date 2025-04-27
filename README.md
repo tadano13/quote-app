@@ -1,63 +1,53 @@
-# Quote of the Day 🌟
-A beautiful web application that serves random inspirational quotes with dark/light mode toggle. Built with Node.js, Express, and MongoDB.
+<div align="center">
+✨ Quote of the Day ✨
+A beautiful web app that serves random quotes with dark/light mode toggle
+Built with Node.js, Express, and MongoDB
 
 Demo
 License
 
-App Screenshot
-
-✨ Features
-Random quote generator from MongoDB database
-
-Elegant UI with smooth animations
-
-Dark/light mode toggle (persists via localStorage)
-
-One-click copy to clipboard
-
-Real-time counter of total quotes
-
-🛠️ Tech Stack
+</div>
+🌟 Features
+Feature	Description
+Random Quotes	Fetches from MongoDB database
+Dark/Light Mode	Toggle with localStorage persistence
+Copy to Clipboard	One-click quote copying
+Smooth Animations	CSS transitions for better UX
+🛠 Tech Stack
 Frontend:
-✔ EJS Templates
-✔ CSS3 Animations
-✔ Responsive Design
+HTML5
+CSS3
+JavaScript
 
 Backend:
-✔ Node.js
-✔ Express.js
+Node.js
+Express
 
 Database:
-✔ MongoDB (local instance)
+MongoDB
 
-🚀 Quick Start
-Clone the repo:
-
+🚀 Installation
 bash
+# Clone the repository
 git clone https://github.com/yourusername/quote-app.git
-Install dependencies:
 
-bash
+# Navigate to project directory
+cd quote-app
+
+# Install dependencies
 npm install
-Start MongoDB and run:
 
-bash
+# Start MongoDB (in separate terminal)
+mongod
+
+# Run the application
 node server.js
 Visit http://localhost:3000
 
-📂 Project Structure
-quote-app/
-├── views/               # EJS templates
-├── public/              # Static assets
-├── server.js            # Express server
-├── package.json
-└── README.md
-🌟 Upcoming Features
-User quote submissions
-
-Quote categories
-
-Social sharing
-
+📸 Screenshots
+<div align="center">
+Light Mode	Dark Mode
+<img src="https://via.placeholder.com/400x250/FFFFFF/37474F?text=Light+Mode" width="90%">	<img src="https://via.placeholder.com/400x250/1B263B/E0E1DD?text=Dark+Mode" width="90%">
+</div>
 📜 License
 This project is licensed under the MIT License - see the LICENSE file for details.
