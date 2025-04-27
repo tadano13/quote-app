@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quote of the Day</title>
+
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Light mode colors */
+      --bg-gradient-start: #e0f7fa;
+      --bg-gradient-end: #e1bee7;
+      --text-color: #333;
+      --card-bg: white;
+      --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      --primary-color: #4a148c;
+      --quote-text: #37474f;
+      --author-text: #757575;
+      --button-bg: #6a1b9a;
+      --button-hover: #4a148c;
+      --toast-bg: #323232;
+    }
+
+    /* Dark mode colors */
+    [data-theme="dark"] {
+      --bg-gradient-start: #0d1b2a;
+      --bg-gradient-end: #1b263b;
+      --text-color: #e0e1dd;
+      --card-bg: #1b263b;
+      --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      --primary-color: #bb86fc;
+      --quote-text: #e0e1dd;
+      --author-text: #b0bec5;
+      --button-bg: #7e57c2;
+      --button-hover: #bb86fc;
+      --toast-bg: #424242;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+      font-family: 'Poppins', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      color: var(--text-color);
+      position: relative;
+      min-height: 100vh;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    #quote-container {
+      margin: 40px 0;
+      padding: 30px;
+      background: var(--card-bg);
+      border-radius: 15px;
+      box-shadow: var(--card-shadow);
+      min-height: 150px;
+      transition: all 0.5s ease;
+    }
+
+    #quote-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-style: italic;
+      color: var(--quote-text);
+      margin-bottom: 20px;
+      transition: opacity 0.3s ease;
+    }
+
+    #quote-author {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--author-text);
+      transition: opacity 0.3s ease;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 18px;
+      background-color: var(--button-bg);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--primary-color);
+    }
+
+    /* Toast Styles */
+    #toast {
+      visibility: hidden;
+      min-width: 250px;
+      background-color: var(--toast-bg);
+      color: #fff;
+      text-align: center;
+      border-radius: 25px;
+      padding: 16px;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      font-size: 17px;
+      opacity: 0;
+      transition: opacity 0.5s ease, visibility 0.5s;
+    }
+
+    #toast.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle">🌓</button>
+
+  <h1>Quote of the Day</h1>
+  <p>We have <%= count %> quotes in our database!</p>
+  
+  <div id="quote-container">
+    <p id="quote-text">Click the button to get a random quote</p>
+    <p id="quote-author"></p>
+  </div>
+  
+  <div class="button-group">
+    <button id="get-quote">Get Random Quote</button>
+    <button id="copy-quote">Copy Quote 📋</button>
+  </div>
+
+  <!-- Toast element -->
+  <div id="toast">Quote copied!</div>
+
+  <script>
+    // DOM Elements
+    const quoteText = document.getElementById('quote-text');
+    const quoteAuthor = document.getElementById('quote-author');
+    const toast = document.getElementById('toast');
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Theme Management
+    function setTheme(theme) {
+      body.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+
+    function toggleTheme() {
+      const currentTheme = body.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
+      themeToggle.textContent = newTheme === 'dark' ? '🌞' : '🌓';
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    themeToggle.textContent = savedTheme === 'dark' ? '🌞' : '🌓';
+
+    // Event Listeners
+    themeToggle.addEventListener('click', toggleTheme);
+
+    document.getElementById('get-quote').addEventListener('click', async () => {
+      try {
+        const response = await fetch('/random-quote');
+        const quote = await response.json();
+        
+        // Smooth fade
+        quoteText.style.opacity = 0;
+        quoteAuthor.style.opacity = 0;
+
+        setTimeout(() => {
+          quoteText.textContent = `"${quote.text}"`;
+          quoteAuthor.textContent = `- ${quote.author}`;
+          
+          quoteText.style.opacity = 1;
+          quoteAuthor.style.opacity = 1;
+        }, 300);
+
+      } catch (err) {
+        console.error('Error fetching quote:', err);
+        quoteText.textContent = 'Failed to fetch quote. Please try again.';
+        quoteAuthor.textContent = '';
+      }
+    });
+
+    document.getElementById('copy-quote').addEventListener('click', () => {
+      const quoteToCopy = `${quoteText.textContent} ${quoteAuthor.textContent}`;
+      navigator.clipboard.writeText(quoteToCopy)
+        .then(() => {
+          showToast();
+        })
+        .catch(err => {
+          console.error('Failed to copy quote:', err);
+        });
+    });
+
+    function showToast() {
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
