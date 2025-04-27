@@ -1,0 +1,189 @@
+[{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e91"
+  },
+  "text": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+  "author": "Winston Churchill"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e92"
+  },
+  "text": "Believe you can and you're halfway there.",
+  "author": "Theodore Roosevelt"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e93"
+  },
+  "text": "Your time is limited, so don’t waste it living someone else’s life.",
+  "author": "Steve Jobs"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e94"
+  },
+  "text": "Dream big and dare to fail.",
+  "author": "Norman Vaughan"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e95"
+  },
+  "text": "He who has a why to live can bear almost any how.",
+  "author": "Friedrich Nietzsche"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e96"
+  },
+  "text": "The wound is the place where the light enters you.",
+  "author": "Rumi"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e97"
+  },
+  "text": "You don’t find the happy life. You make it.",
+  "author": "Camilla Eyring Kimball"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e98"
+  },
+  "text": "The quieter you become, the more you can hear.",
+  "author": "Ram Dass"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e99"
+  },
+  "text": "I am not lazy. I am on energy-saving mode.",
+  "author": "Unknown"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e9a"
+  },
+  "text": "Life is short. Smile while you still have teeth.",
+  "author": "Unknown"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e9b"
+  },
+  "text": "My bed and I love each other, but the alarm clock keeps trying to break us up.",
+  "author": "Unknown"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e9c"
+  },
+  "text": "I'm not arguing, I'm just explaining why I'm right.",
+  "author": "Unknown"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e9d"
+  },
+  "text": "Push yourself, because no one else is going to do it for you.",
+  "author": "Unknown"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e9e"
+  },
+  "text": "Don’t watch the clock; do what it does. Keep going.",
+  "author": "Sam Levenson"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0e9f"
+  },
+  "text": "Little by little, one travels far.",
+  "author": "J.R.R. Tolkien"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea0"
+  },
+  "text": "Doubt kills more dreams than failure ever will.",
+  "author": "Suzy Kassem"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea1"
+  },
+  "text": "Knowing yourself is the beginning of all wisdom.",
+  "author": "Aristotle"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea2"
+  },
+  "text": "The unexamined life is not worth living.",
+  "author": "Socrates"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea3"
+  },
+  "text": "Man suffers only because he takes seriously what the gods made for fun.",
+  "author": "Alan Watts"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea4"
+  },
+  "text": "Happiness is not something ready-made. It comes from your own actions.",
+  "author": "Dalai Lama"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea5"
+  },
+  "text": "Love is composed of a single soul inhabiting two bodies.",
+  "author": "Aristotle"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea6"
+  },
+  "text": "We are most alive when we're in love.",
+  "author": "John Updike"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea7"
+  },
+  "text": "In the end, we discover that to love and let go can be the same thing.",
+  "author": "Jack Kornfield"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea8"
+  },
+  "text": "Stay hungry. Stay foolish.",
+  "author": "Steve Jobs"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0ea9"
+  },
+  "text": "Fall seven times, stand up eight.",
+  "author": "Japanese Proverb"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0eaa"
+  },
+  "text": "Turn your wounds into wisdom.",
+  "author": "Oprah Winfrey"
+},
+{
+  "_id": {
+    "$oid": "680cff6d3c97940fd9ff0eab"
+  },
+  "text": "Be yourself; everyone else is already taken.",
+  "author": "Oscar Wilde"
+}]
