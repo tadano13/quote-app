@@ -5,7 +5,7 @@
 **A beautiful web app that serves random quotes with dark/light mode toggle**  
 *Built with Node.js, Express, and MongoDB*
 
-[![Live Demo](https://img.shields.io/badge/DEMO-🚀_Try_It-4a148c?style=for-the-badge&logo=vercel)](https://your-demo-link.com)
+
 [![License](https://img.shields.io/badge/LICENSE-📜_MIT-6a1b9a?style=for-the-badge)](LICENSE)
 
 </div>
