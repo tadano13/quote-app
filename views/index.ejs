@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quote of the Day</title>
-
-  <!-- Import Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
   <style>
@@ -23,8 +21,6 @@
       --button-hover: #4a148c;
       --toast-bg: #323232;
     }
-
-    /* Dark mode colors */
     [data-theme="dark"] {
       --bg-gradient-start: #0d1b2a;
       --bg-gradient-end: #1b263b;
@@ -113,8 +109,6 @@
       background-color: var(--button-hover);
       transform: translateY(-2px);
     }
-
-    /* Theme Toggle */
     .theme-toggle {
       position: absolute;
       top: 20px;
@@ -125,8 +119,6 @@
       cursor: pointer;
       color: var(--primary-color);
     }
-
-    /* Toast Styles */
     #toast {
       visibility: hidden;
       min-width: 250px;
@@ -153,7 +145,6 @@
 </head>
 
 <body>
-  <!-- Theme Toggle Button -->
   <button class="theme-toggle" id="themeToggle">🌓</button>
 
   <h1>Quote of the Day</h1>
@@ -168,19 +159,13 @@
     <button id="get-quote">Get Random Quote</button>
     <button id="copy-quote">Copy Quote 📋</button>
   </div>
-
-  <!-- Toast element -->
   <div id="toast">Quote copied!</div>
-
   <script>
-    // DOM Elements
     const quoteText = document.getElementById('quote-text');
     const quoteAuthor = document.getElementById('quote-author');
     const toast = document.getElementById('toast');
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
-
-    // Theme Management
     function setTheme(theme) {
       body.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
@@ -192,15 +177,10 @@
       setTheme(newTheme);
       themeToggle.textContent = newTheme === 'dark' ? '🌞' : '🌓';
     }
-
-    // Initialize theme
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
     themeToggle.textContent = savedTheme === 'dark' ? '🌞' : '🌓';
-
-    // Event Listeners
     themeToggle.addEventListener('click', toggleTheme);
-
     document.getElementById('get-quote').addEventListener('click', async () => {
       try {
         const response = await fetch('/random-quote');
@@ -244,4 +224,5 @@
     }
   </script>
 </body>
+
 </html>
